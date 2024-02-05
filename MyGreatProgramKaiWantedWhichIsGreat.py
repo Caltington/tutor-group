@@ -1,5 +1,6 @@
+#Imports
 import random
-
+#Login
 def login():
     inputusername = input("Enter your username: ")
     if inputusername == "admin":
@@ -31,6 +32,7 @@ def Add_Student():
         file.write(str(student_ID) + "," + firstname + "," + secondname + "," + dateofbirth + "," + address + "," + phonenumber + "," + gender + "," + tutorgroup + ",\n")
     print("Added to database")
     menu()
+#Student Search
 def Search_Student():
     counter = 0
     student = input("Enter the student ID: ")
@@ -45,6 +47,7 @@ def Search_Student():
         if counter == 0:
             print("No data was associated with the ID of", student)
     menu()
+#Generate report
 def Generate_Report():
     counter = 0
     student = input("Enter the student's ID: ")
@@ -65,6 +68,7 @@ def Generate_Report():
                 file.write(names + gender + grades)
                 print("Report card generated as", student + "report.txt")
     menu()
+#Menu
 def menu():
     print("Tutor Group Program")
     print("Do you wish to add a student, search for a student, generate a report or log out?")
