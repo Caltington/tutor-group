@@ -8,20 +8,17 @@ def login():
         print("Welcome", inputusername + "!\n")
         menu()
     inputpassword = input("Enter your password: ")
-    username = "Leemaster67"
-    password = "TheRealLeemaster67!"
-    if inputusername == username:
-        if inputpassword == password:
-            print("Valid login")
-            print("Welcome", username + "!\n")
-            menu()
-        else:
-            print("Invalid password")
-            login()
-    else:
-        print("Username not found!")
-        login()
-#Add Student
+    username = ["Leemaster67", "Gerald43", "Steve49"]
+    password = ["TheRealLeemaster67!", "Greatgerald4", "Stevethethird"]
+    for x in username:
+        if x == inputusername:
+            position = username.index(x)
+            if inputpassword == password[position]:
+                print("Valid login")
+                print("Welcome", inputusername + "!\n")
+                menu()
+    print("Invalid username or password")
+    login()
 def Add_Student():
     student_ID = random.randint(1000,9999)
     firstname = input("Enter the student's first name: ")
